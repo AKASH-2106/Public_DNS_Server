@@ -1,0 +1,20 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	machine1.nitk.example.com. admin.nitk.example.com. (
+			      5		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+
+; name servers - NS records
+      IN       NS	machine1.nitk.example.com.
+      IN       NS	machine2.nitk.example.com.
+
+; PTR Records
+2	IN	PTR	machine1.nitk.example.com.	; 192.168.56.2
+3	IN	PTR	machine2.nitk.example.com.	; 192.168.56.3
+10	IN	PTR	machine3.nitk.example.com.	; 192.168.56.10
+11	IN	PTR	machine4.nitk.example.com.	; 192.168.56.11
